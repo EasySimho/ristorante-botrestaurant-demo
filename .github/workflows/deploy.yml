@@ -1,0 +1,44 @@
+# Da copiare nella repository del ristorante: .github/workflows/deploy.yml
+# Il worker deve aver generato e verificato l'export statico in site/.
+name: Publish restaurant site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout approved version
+        uses: actions/checkout@v6
+      - name: Check static export
+        run: test -f site/index.html
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static export
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

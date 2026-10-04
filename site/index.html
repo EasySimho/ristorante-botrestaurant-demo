@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tavola — Demo: un esempio di sito per un ristorante di cucina italiana contemporanea. Locale, menu e contatti dimostrativi.">
+  <meta name="theme-color" content="#343e2b">
+  <title>Tavola — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Vai al contenuto</a>
+  <div class="demo-banner"><span class="demo-dot" aria-hidden="true"></span> Sito dimostrativo · Non rappresenta un ristorante reale</div>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" data-bind="name">Tavola — Demo</a>
+    <nav aria-label="Navigazione principale">
+      <a href="#menu">Menu</a>
+      <a href="#about">Il progetto</a>
+      <a href="#contact">Informazioni</a>
+    </nav>
+    <a class="header-link" href="#booking">Prenotazioni <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Cucina italiana contemporanea / Demo</p>
+        <h1 id="hero-title" data-bind="name">Tavola — Demo</h1>
+        <p class="hero-editorial">Il piacere di<br>prendersi tempo.</p>
+        <p class="intro" data-bind="cuisine">Un esempio di sito per un ristorante di cucina italiana contemporanea.</p>
+        <a class="button" href="#menu">Esplora il menu demo <span aria-hidden="true">↗</span></a>
+        <div class="hero-foot"><span>Un progetto da immaginare.<br>Una tavola da raccontare.</span><a href="#about" aria-label="Scopri il progetto">Scorri <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-image">
+        <img data-hero alt="Fotografia del ristorante" hidden fetchpriority="high" decoding="async">
+        <div class="photo-placeholder" data-placeholder>
+          <div class="placeholder-top"><span>Spazio fotografico</span><span aria-hidden="true">01</span></div>
+          <div class="placeholder-center"><span class="placeholder-word" aria-hidden="true">t.</span><p>Qui prende forma<br>la tua tavola.</p></div>
+          <div class="placeholder-bottom"><span>Fotografia non disponibile</span><small>Anteprima senza immagini del locale</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section" aria-labelledby="about-title">
+      <div class="section-label"><p class="eyebrow">01 / Il progetto</p><span class="label-rule" aria-hidden="true"></span></div>
+      <div class="about-content">
+        <h2 id="about-title">Una tavola.<br>Una storia da scrivere.</h2>
+        <div class="about-text"><p class="story" data-bind="story">Questo è un ristorante dimostrativo di BotRestaurant. Nome, menu e contatti sono esempi per verificare il funzionamento del servizio: non rappresentano un locale reale.</p><p class="editorial-note">Questa anteprima mostra come testi, menu e fotografie possono diventare il racconto di un locale.</p></div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu section" aria-labelledby="menu-title">
+      <div class="menu-intro">
+        <p class="eyebrow">02 / Il menu</p>
+        <h2 id="menu-title">Un assaggio<br>del progetto.</h2>
+        <p>Tre voci di esempio, per esplorare un menu leggibile anche dal telefono.</p>
+        <a class="text-link" data-menu-pdf hidden target="_blank" rel="noopener">Apri il menu PDF <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="menu-sheet">
+        <div class="sheet-heading"><span>La carta</span><span class="demo-tag">Dimostrativa</span></div>
+        <div class="menu-lines" data-menu>
+          <div class="menu-line">MENU DIMOSTRATIVO</div>
+          <div class="menu-line">Antipasti di stagione — € 12</div>
+          <div class="menu-line">Pasta del giorno — € 16</div>
+          <div class="menu-line">Dolce della casa — € 7</div>
+        </div>
+        <p class="sheet-note">Piatti e prezzi sono esempi forniti per questa demo e non costituiscono un’offerta commerciale.</p>
+      </div>
+    </section>
+
+    <section class="gallery section" aria-label="Fotografie del ristorante" data-gallery hidden></section>
+
+    <section id="contact" class="contact section" aria-labelledby="contact-title">
+      <div class="contact-title"><p class="eyebrow">03 / Le informazioni</p><h2 id="contact-title">Il luogo,<br>il momento.</h2><p class="contact-disclaimer">Anche queste informazioni sono dimostrative. Indirizzo e recapiti reali sono da configurare.</p></div>
+      <div class="contact-details">
+        <div class="contact-block"><h3>Indirizzo</h3><p data-bind="address">Indirizzo dimostrativo — da configurare</p><a class="text-link" data-map hidden target="_blank" rel="noopener">Indicazioni <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-block"><h3>Orari di esempio</h3><p class="preserve" data-bind="hours">Orari dimostrativi
+Martedì–Domenica · 19:00–23:00</p></div>
+        <div class="contact-block" id="phone"><h3>Contatti</h3><p class="contact-placeholder">Telefono ed email non configurati nella demo.</p><a class="contact-link" data-phone hidden></a><a class="contact-link" data-email hidden></a></div>
+      </div>
+    </section>
+
+    <section id="booking" class="booking section" aria-labelledby="booking-title">
+      <div class="booking-intro"><p class="eyebrow">04 / Le richieste</p><h2 id="booking-title">Ci vediamo<br>a tavola?</h2><p>Quando il servizio è attivo, il modulo invia una richiesta: la disponibilità del tavolo viene confermata dal ristorante.</p><div class="demo-notice"><span class="demo-tag">Solo anteprima</span><p>Prenotazioni e richiamate sono disattivate in questa demo. I moduli non raccolgono né inviano dati.</p></div><p class="service-notice" data-service-notice hidden></p></div>
+      <div class="forms">
+        <form data-kind="booking" aria-describedby="booking-unavailable">
+          <div class="form-heading"><h3>Richiedi un tavolo</h3><span aria-hidden="true">↗</span></div>
+          <p id="booking-unavailable" class="form-description">Servizio non disponibile nell’anteprima.</p>
+          <fieldset disabled><legend class="visually-hidden">Dati della richiesta di prenotazione</legend>
+            <div class="form-grid">
+              <label>Il tuo nome<input name="name" required minlength="2" maxlength="100" autocomplete="name"></label>
+              <label>Telefono<input name="phone" type="tel" required maxlength="40" autocomplete="tel"></label>
+              <label>Giorno<input name="date" type="date" required></label>
+              <label>Orario<input name="time" type="time" required></label>
+              <label>Persone<input name="people" type="number" min="1" max="50" value="2" required></label>
+              <label>Email (facoltativa)<input name="email" type="email" maxlength="150" autocomplete="email"></label>
+            </div>
+            <label>Note<textarea name="note" maxlength="1500" rows="2" placeholder="Hai qualche richiesta particolare?"></textarea></label>
+            <label class="consent"><input name="consent" type="checkbox" required><span>Acconsento a essere contattato per gestire questa richiesta.</span></label>
+            <label class="honeypot" aria-hidden="true">Sito web<input name="website" tabindex="-1" autocomplete="off"></label>
+            <button class="button" type="submit" disabled>Invia richiesta <span aria-hidden="true">↗</span></button>
+          </fieldset>
+          <p role="status" aria-live="polite" class="form-status"></p>
+        </form>
+        <form data-kind="callback" aria-describedby="callback-unavailable">
+          <div class="form-heading"><h3>Preferisci una chiamata?</h3><span aria-hidden="true">↗</span></div>
+          <p id="callback-unavailable" class="form-description">Richiamata non disponibile nella demo. Quando attiva, invia una richiesta di contatto.</p>
+          <fieldset disabled><legend class="visually-hidden">Dati della richiesta di richiamata</legend>
+            <div class="form-grid"><label>Il tuo nome<input name="name" required minlength="2" maxlength="100" autocomplete="name"></label><label>Telefono<input name="phone" type="tel" required maxlength="40" autocomplete="tel"></label></div>
+            <label class="consent"><input name="consent" type="checkbox" required><span>Acconsento a essere contattato per gestire questa richiesta.</span></label>
+            <label class="honeypot" aria-hidden="true">Sito web<input name="website" tabindex="-1" autocomplete="off"></label>
+            <button class="button outline" type="submit" disabled>Richiedi una chiamata <span aria-hidden="true">↗</span></button>
+          </fieldset>
+          <p role="status" aria-live="polite" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="wordmark" href="#top" data-bind="name">Tavola — Demo</a><a class="back-top" href="#top">Torna all’inizio <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><p>Un progetto dimostrativo di BotRestaurant.</p><a data-privacy hidden target="_blank" rel="noopener">Privacy</a><span>© <span data-year></span> · Candidata TAVOLA-DEMO-01</span></div></footer>
+  <nav class="mobile-nav" aria-label="Accesso rapido"><a href="#menu">Menu</a><a href="#booking">Prenota <span class="mobile-demo">demo</span></a><a href="#phone">Chiama <span class="mobile-demo">non attivo</span></a></nav>
+</body>
+</html>

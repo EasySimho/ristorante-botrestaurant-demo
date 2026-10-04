@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "name": "Tavola — Demo",
+    "cuisine": "Un esempio di sito per un ristorante di cucina italiana contemporanea.",
+    "story": "Questo è un ristorante dimostrativo di BotRestaurant. Nome, menu e contatti sono esempi per verificare il funzionamento del servizio: non rappresentano un locale reale.",
+    "style": "Bistrot editoriale contemporaneo, caldo e raffinato. Toni crema e verde oliva, tipografia con carattere, grandi spazi e composizione ispirata alla qualità dei siti Awwwards. Deve essere chiaro che è una demo.",
+    "address": "Indirizzo dimostrativo — da configurare",
+    "phone": "",
+    "email": "",
+    "hours": "Orari dimostrativi\nMartedì–Domenica · 19:00–23:00",
+    "menu": "MENU DIMOSTRATIVO\nAntipasti di stagione — € 12\nPasta del giorno — € 16\nDolce della casa — € 7",
+    "heroAsset": null,
+    "menuAsset": null,
+    "gallery": [],
+    "bookingEnabled": false,
+    "callbackEnabled": false,
+    "privacyUrl": ""
+  },
+  "assets": {},
+  "endpoint": "http://127.0.0.1:8788/api/public/34f3d04caaecb2f17a189c8add78e7725f60b384/requests",
+  "slug": "botrestaurant-demo",
+  "version": "37356b01-33a6-43b6-a45e-0615f4d2a900"
+}
